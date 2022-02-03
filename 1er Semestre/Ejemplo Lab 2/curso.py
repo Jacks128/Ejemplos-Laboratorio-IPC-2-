@@ -1,9 +1,6 @@
-#PRIMERA PARTE
 class Curso:
     nombre="IPC 2"
-#    creditos=5
     duracion=100
-#    area="desarrollo de software"
     nota=61
 
   
@@ -14,7 +11,6 @@ class Curso:
         self.catedratico=catedratico
 
 
-#SEGUNDA PARTE
 
     def obtener_Nota(self):
         return self.nota   
@@ -28,4 +24,11 @@ class Lab(Curso):
 class Practica(Curso):
     nombre="Practica Computo 2"   
     duracion=30
-    nota=61        
+    nota=61      
+    
+class TrabajoDirigido(Curso):
+    nombre="Lab Quimica"   
+    duracion=30
+    nota=61      
+        
+      

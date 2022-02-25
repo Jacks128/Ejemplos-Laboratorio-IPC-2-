@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actores>
+   <actor nombre="Scarlett Johansson" edad="37" nacionalidad="estadounidense">
+      <peliculas>
+         <pelicula nombre="Marvel's The Avengers" papel="Natasha Romanoff" anio="2012">143</pelicula>
+         <pelicula nombre="Historia de un matrimonio" papel="Nicole Barber" anio="2019">136</pelicula>
+         <pelicula nombre="Jojo Rabbit" papel="Rosie Betzler" anio="2019">108</pelicula>
+      </peliculas>
+   </actor>
+   <actor nombre="Sandra Bullock" edad="57" nacionalidad="estadounidense">
+      <peliculas>
+         <pelicula nombre="Ocean's 8" papel="Debbie Ocean" anio="2018">148</pelicula>
+         <pelicula nombre="Bird Box, a ciegas" papel="Malorie" anio="2018">106</pelicula>
+         <pelicula nombre="La propuesta" papel="Margaret Tate" anio="2009">128</pelicula>
+      </peliculas>
+   </actor>
+   <actor nombre="Anne Hathaway" edad="39" nacionalidad="estadounidense">
+      <peliculas>
+         <pelicula nombre="The Princess Diaries 2: Royal Engagement" papel="Mia Thermopolis" anio="2004">153</pelicula>
+         <pelicula nombre="Ella Enchanted" papel="Ella de Frellr" anio="2002">139</pelicula>
+         <pelicula nombre="Guerra de novias" papel="Emma Allen" anio="2009">168</pelicula>
+      </peliculas>
+   </actor>
+   <actor nombre="Alec Baldwin" edad="63" nacionalidad="estadounidense">
+      <peliculas>
+         <pelicula nombre="Beetlejuice" papel="Adam Maitland" anio="1988">133</pelicula>
+         <pelicula nombre="Misión imposible: Nación secreta" papel="Alan Hunley" anio="2015">150</pelicula>
+         <pelicula nombre="Mission: Impossible - Fallout" papel="Alan Hunley " anio="2018">145</pelicula>
+      </peliculas>
+   </actor>
+</actores>

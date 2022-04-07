@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Bienvenido a mas alla del ejemplo</h1>
+        <p class="lead text-muted"> No se rindan ya falta poquito</p>
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 align-items-center">
+                <div class="card mb-4 box-shadow align-items-center" style="width: 25rem;">
+                    <img class="card-img-top" style="width: 25rem;"
+                        src="https://www.smashbros.com/wiiu-3ds/images/character/kirby/main.png" alt="Imagen">
+                    <div class="card-body">
+                        <h5 class="card-title">Kirby</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Mascota de IPC2 B</h6>
+                        <p class="card-text" style="text-align: justify;"></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                                <button type="button" class="btn btn-sm btn-dark">Add to Cart</button>
+                            </div>
+                            <small class="text-muted"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="{% url 'front-login' %}">Log out</a>
+        </p>
+        <p>Ejemplo de Tienda de Productos &copy; Bootstrap.</p>
+        <p>¿Nuevos en Bootstrap? <a href="../../">Visiten la pagina oficial </a> o consulten <a
+                href="../../getting-started/"> la guía de inicio</a>.</p>
+    </div>
+</footer>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5 ">
+<div class="row">
+    <div class="col">
+        <form action="/login/" method="GET">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username:</label>
+              <input type="text" class="form-control" id="username" name ="username" aria-describedby="userhelp">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password:</label>
+              <input type="password" class="form-control" id="password" name="password"> 
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" name="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Recordarme.</label>
+            </div>
+            <button type="submit" class="btn btn-dark btn-lg">Iniciar Sesi&oacute;n</button>
+          </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -9,30 +9,28 @@
 
 <div class="album py-5 bg-light">
     <div class="container">
-
-        <div class="row">
-            <div class="col-md-12 align-items-center">
-                <div class="card mb-4 box-shadow align-items-center" style="width: 25rem;">
-                    <img class="card-img-top" style="width: 25rem;"
-                        src="https://www.smashbros.com/wiiu-3ds/images/character/kirby/main.png" alt="Imagen">
-                    <div class="card-body">
-                        <h5 class="card-title">Kirby</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Mascota de IPC2 B</h6>
-                        <p class="card-text" style="text-align: justify;"></p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                <button type="button" class="btn btn-sm btn-dark">Add to Cart</button>
-                            </div>
-                            <small class="text-muted"></small>
-                        </div>
-                    </div>
+      <div class="row">
+        {% for cancion in canciones%}
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow" style="width: 23rem;">
+            <img class="card-img-top" style="width: 23rem; height: 23rem; " src="{{cancion.image}}" alt="{{cancion.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{cancion.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{cancion.artist}}</h6>
+              <p class="card-text" style="text-align: justify; height: 10rem;">{{cancion.album}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                  <button type="button" class="btn btn-sm btn-dark">Ver más</button>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+        {% endfor %}
+      </div>
     </div>
-</div>
-
+  </div>
 {% endblock content %}
 
 <footer class="text-muted">

@@ -23,14 +23,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" >Home</a>
+            <a class="nav-link active" aria-current="page"  href="{% url 'front-home' %}" >Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">About</a>
+          <!--BEGIN Nuevo codigo-->
+            <a class="nav-link" href="{% url 'add' %}">Insertar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" >Registrarse</a>
+            <a class="nav-link" href="{% url 'carga' %}">Cargar Archivo</a>
           </li>
+          <!--END Nuevo codigo-->
 
         </ul>
         <form class="d-flex">

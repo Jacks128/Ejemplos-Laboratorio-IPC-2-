@@ -1,0 +1,10 @@
+<data>
+	<items>
+		<item name="item1" size="2">Hola vamos a ganar IPC 2</item> <!--0-->
+		<item name="item2" size="4">Hola vamos a ganar Lenguajes</item> <!--1-->
+	</items>
+	<items>
+		<item name="item3" size="2">Hola vamos a ganar IPC 2</item> <!--0-->
+		<item name="item4" size="4">Hola vamos a ganar Lenguajes</item> <!--1-->
+	</items>
+</data>

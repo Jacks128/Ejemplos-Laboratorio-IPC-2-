@@ -20,5 +20,4 @@ class ListaDoble():
         tmp=self.inicio
         while tmp is not None:
             print('Nombre ',tmp.nombre,' Papel ',tmp.papel,' Anio ',tmp.anio)
-            
-
+            tmp=tmp.siguiente

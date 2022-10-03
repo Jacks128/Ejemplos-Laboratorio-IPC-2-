@@ -108,12 +108,13 @@ class ListaCircularDoble:
         return text
 
     def crearReporte(self):
+        os.mkdir('Paciente')
         contenido="digraph G{\n\n"
-        r=open("reporte.txt","w")
+        r=open("Paciente/reporte.txt","w")
         contenido+=str(self.report())
         contenido+="\n}"
         r.write(contenido)
         r.close()
         print("done")
-        os.system("dot -Tpng reporte.txt -o reporte.png")
-        os.system("dot -Tpdf reporte.txt -o reporte.pdf")
+        os.system("dot -Tpng Paciente/reporte.txt -o Paciente/reporte.png")
+        os.system("dot -Tpdf Paciente/reporte.txt -o Paciente/reporte.pdf")

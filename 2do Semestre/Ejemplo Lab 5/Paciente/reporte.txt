@@ -1,0 +1,16 @@
+digraph G{
+
+rankdir=LR; 
+ node[shape=egg, style=filled, color=khaki, fontname="Century Gothic"];  graph [fontname = "Century Gothic"];labelloc="t; "label = "Cursos";
+x1[dir=both label="Codigo =1\nNombre = Logica \nCreditos = 1"]x1-> x2009
+x1-> x201
+x2009[dir=both label="Codigo =2009\nNombre = Practicas Finales \nCreditos = 0"]x2009[dir=both label="Codigo =2009\nNombre = Practicas Finales \nCreditos = 0"]x2009-> x771
+x2009-> x1
+x771[dir=both label="Codigo =771\nNombre = IPC 2 \nCreditos = 4"]x771[dir=both label="Codigo =771\nNombre = IPC 2 \nCreditos = 4"]x771-> x200
+x771-> x2009
+x200[dir=both label="Codigo =200\nNombre = Mate Aplicada 3 \nCreditos = 5"]x200[dir=both label="Codigo =200\nNombre = Mate Aplicada 3 \nCreditos = 5"]x200-> x201
+x200-> x771
+x201[dir=both label="Codigo =201\nNombre = Mate Aplicada 5 \nCreditos = 5"]x201-> x1
+x201-> x200
+
+}

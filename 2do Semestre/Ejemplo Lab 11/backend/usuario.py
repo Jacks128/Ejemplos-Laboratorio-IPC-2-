@@ -3,4 +3,4 @@ class Usuario:
         self.nombre=nombre
         self.apellido=apellido
         self.password=password
-        self.usuario=usuario
+        self.user=usuario

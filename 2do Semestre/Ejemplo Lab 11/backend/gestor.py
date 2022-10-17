@@ -9,14 +9,18 @@ class Gestor:
         self.usuarios.append(Usuario('Jackeline','Benitez','admin','jacks128'))
         self.usuarios.append(Usuario('Kirby','SuperStar','kirby123','kirby'))
 
+    def obtener_usuarios(self):
+        return json.dumps([ob.__dict__ for ob in self.usuarios])
+
     def obtener_usuario(self,user,password):
         for x in self.usuarios:
-            if x.user==user and x.password==password:
+            if x.user==user and x.password==password:   
                 return x
         return None
+
     
     '''agregar_cancion(self,Neverita,Bad Bunny,www.neverita.com,Un Verano Sin Ti)'''
-    def agregar_cancion(self,nombre,artista,imagen,album):
+    '''def agregar_cancion(self,nombre,artista,imagen,album):
         nuevo=Cancion(nombre,artista,imagen,album)
         self.canciones.append(nuevo)
-        return True
+        return True'''

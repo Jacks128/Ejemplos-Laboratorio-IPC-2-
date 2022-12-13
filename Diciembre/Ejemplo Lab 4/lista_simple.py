@@ -21,12 +21,14 @@ class ListaSimple():
     def agregarUltimo(self, nombre, apellido, CUI, edad, estado_civil):
         nuevo=Persona(nombre,apellido,CUI,edad,estado_civil)
 
-        if self.estaVacia==True:
-            self.primero=self.ultimo=nuevo
+        temp = self.primero
+
+        if temp is None:
+            self.primero = self.ultimo = nuevo 
         else:
-            temp=self.primero
+            temp = self.primero
             while temp.siguiente is not None:
-                temp=temp.siguiente
+                    temp=temp.siguiente
             temp.siguiente=nuevo
 
 

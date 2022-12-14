@@ -1,0 +1,16 @@
+digraph G{
+
+rankdir=LR; 
+ node[shape=egg, style=filled, color=khaki, fontname="Century Gothic"]; 
+ graph [fontname="Century Gothic"]; 
+ labelloc="t"; label="Ordenes"; 
+xAntonio1[dir=both label="Nombre:AntonioGonzalez\nTipo de Orden: Galletas Jengibre\nCantidad = 1"]xAntonio1-> xKirby3
+xAntonio1-> xJacky2
+xKirby3[dir=both label="Nombre:KirbyStar\nTipo de Orden: Pastel de Frutas\nCantidad = 3"]xKirby3[dir=both label="Nombre:KirbyStar\nTipo de Orden: Pastel de Frutas\nCantidad = 3"]xKirby3-> xJeny4
+xKirby3-> xAntonio1
+xJeny4[dir=both label="Nombre:JenyPerez\nTipo de Orden: Pastel Danes\nCantidad = 4"]xJeny4[dir=both label="Nombre:JenyPerez\nTipo de Orden: Pastel Danes\nCantidad = 4"]xJeny4-> xJacky2
+xJeny4-> xKirby3
+xJacky2[dir=both label="Nombre:JackyBenitez\nTipo de Orden: Galletas Jengibre\nCantidad = 2"]xJacky2[dir=both label="Nombre:JackyBenitez\nTipo de Orden: Galletas Jengibre\nCantidad = 2"]xJacky2-> xAntonio1
+xJacky2-> xJeny4
+
+}

@@ -31,3 +31,5 @@ print("-----------Recorrido de Inicio a Fin Despues de Eliminar------------")
 listaCola.recorrer_inicio_fin()
 
 print("Orden encontrada: ",listaCola.buscar("Spider","man"))
+
+lista.crearReporte()

@@ -1,3 +1,4 @@
+import os
 from ordenes import Ordenes
 
 class ListaCircularDobleEnlazada:
@@ -84,3 +85,35 @@ class ListaCircularDobleEnlazada:
                 aux=aux.siguiente
                 if aux==self.primero:
                     return False
+
+    def report(self):
+        aux=self.primero
+        text=""
+        text+="rankdir=LR; \n "
+        text+="node[shape=egg, style=filled, color=khaki, fontname=\"Century Gothic\"]; \n "
+        text+="graph [fontname=\"Century Gothic\"]; \n "
+        text+="labelloc=\"t\"; label=\"Ordenes\"; \n"
+
+        while aux:
+            text+="x"+str(aux.nombre)+str(aux.cantidad) + "[dir=both label=\"Nombre:"+ str(aux.nombre)+str(aux.apellido) + "\\nTipo de Orden: "+str(aux.tipo_postre)+"\\nCantidad = "+str(aux.cantidad)+"\"]"
+            text+="x"+str(aux.nombre)+str(aux.cantidad)+"-> x"+str(aux.siguiente.nombre)+str(aux.siguiente.cantidad)+"\n"
+            text+="x"+str(aux.nombre)+str(aux.cantidad)+"-> x"+str(aux.anterior.nombre)+str(aux.anterior.cantidad)+"\n"
+            aux=aux.siguiente
+            if aux!=self.primero:
+                text+="x"+str(aux.nombre)+str(aux.cantidad) + "[dir=both label=\"Nombre:"+ str(aux.nombre)+str(aux.apellido) + "\\nTipo de Orden: "+str(aux.tipo_postre)+"\\nCantidad = "+str(aux.cantidad)+"\"]"
+                print(text)
+            if aux==self.primero:
+                break
+        return text
+
+    def crearReporte(self):
+        os.mkdir('Ordenes')
+        contenido="digraph G{\n\n"
+        r= open("Ordenes/reporte.txt","w")
+        contenido+=str(self.report())
+        contenido+="\n}"
+        r.write(contenido)
+        r.close()
+        os.system("dot -Tpng Ordenes/reporte.txt -o Ordenes/reporte.png")
+        os.system("dot -Tpdf Ordenes/reporte.txt -o Ordenes/reporte.pdf")
+        print("done")

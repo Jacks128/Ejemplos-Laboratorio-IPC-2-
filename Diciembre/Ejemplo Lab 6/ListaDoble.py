@@ -5,7 +5,7 @@ class ListaDoble():
         self.inicio=None
     
     def insertarPelicula(self,nombre,papel,anio,duracion):
-        nuevo=Pelicula(self,nombre,papel,anio,duracion)
+        nuevo=Pelicula(nombre,papel,anio,duracion)
         if self.inicio is None:
             self.inicio=nuevo
         else:

@@ -7,7 +7,7 @@ class ListaSimple():
         self.tam=0
 
     def crearActor(self, nombre, edad, nacionalidad):
-        nuevo=Actor(self, nombre, edad, nacionalidad)
+        nuevo=Actor(nombre, edad, nacionalidad)
         self.tam+=1
         if self.inicio is None:
             self.inicio=nuevo
@@ -27,16 +27,27 @@ class ListaSimple():
         tmp=self.inicio
         while tmp is not None:
             if tmp.nombre==nombre:
+                self.tam-=1
                 self.inicio=tmp.siguiente
                 tmp.siguiente=None
                 print('Actor ',tmp.nombre,' fue eliminado')
                 break
             elif tmp.siguiente is not None:
                 if tmp.siguiente.nombre==nombre:
+                    self.tam-=1
                     nodo_borrar=tmp.siguiente
                     tmp.siguiente=nodo_borrar.siguiente
                     nodo_borrar.siguiente=None
                     print('Actor ',nombre,' fue eliminado')
                     break
             tmp=tmp.siguiente
+
+    def getActor(self,nombre):
+        tmp=self.inicio
+        while tmp is not None:
+            if tmp.nombre==nombre:
+                return tmp
+            tmp=tmp.siguiente
+        return None
+
 

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Bienvenido a mas alla del ejemplo</h1>
+        <p class="lead text-muted"> No se rindan ya falta poquito</p>
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        {% for cancion in canciones%}
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow" style="width: 23rem;">
+            <img class="card-img-top" style="width: 23rem; height: 23rem; " src="{{cancion.image}}" alt="{{cancion.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{cancion.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{cancion.artist}}</h6>
+              <p class="card-text" style="text-align: justify; height: 10rem;">{{cancion.album}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                  <button type="button" class="btn btn-sm btn-dark">Ver más</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="{% url 'front-login' %}">Log out</a>
+        </p>
+        <p>Ejemplo de Tienda de Productos &copy; Bootstrap.</p>
+        <p>¿Nuevos en Bootstrap? <a href="../../">Visiten la pagina oficial </a> o consulten <a
+                href="../../getting-started/"> la guía de inicio</a>.</p>
+    </div>
+</footer>
